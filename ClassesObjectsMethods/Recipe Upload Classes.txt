@@ -1,0 +1,37 @@
+Recipe Upload Classes
+
+Class:
+RecipeUpload (Κληρονομεί από RecipeSearch)
+
+Objects:     
+- name: string    
+- ingredients: String
+- process: string 
+- calories: Double
+- createdBy: String
+- creationDate: DateTime 
+
+Methods:
++CreateRecipe(String name)
++ submitRecipe(): void 
++ updateIngredients(): void 
++ updateProcess(): void 
++ calculateCalories(): void 
++ getCreatedBy(String Username) 
++ getCreationDate(): DateTime 
+
+
+
+
+Class:
+IngridientHandler (Κληρονομεί από RecipeUpload)
+
+Objects:        
+- IngridientName: string    
+
+Methods:
++ DisplaySimilarIngredients(String IngridientName)
++SelectSimilarIngridient(StringIngridientName)
+
+
+

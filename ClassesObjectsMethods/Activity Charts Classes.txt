@@ -1,0 +1,65 @@
+Activity Charts Classes
+
+
+
+Class:
+ActivityChartsDay (κληρονομεί από Training)
+
+Objects:
+-ChartsMessage : String
+
+Methods:
++ActivityChartsRedirectionRequest : Bool
++PromptChartsAvailabilityMessage() : String
++GenerateCharts(ActivityStatsDay activitystats)
++DisplayCharts()
++DisplayInabilityMessage() : String
+
+
+
+Class:
+WeeklyWinnerRequest
+
+Objects:
+
+Methods:
++CheckWeeklyWinnerAvailability() : Bool
++WeeklyWinnerParticipationRequest() : String
+
+
+
+
+
+Class:
+ Training
+
+Objects:
+-WorkoutCalories :  Double
+-Steps : Int
+-Distance : String
+-Points : Long
+-ExerciseCount() : String
+-RepsCount() : Int
+
+Methods:
++UpdateStatistics(Double Workout Calories...)
++ShowRealTimeStatistics(Double Calories... )
++EarlyProgramTermination() : Void
+
+
+
+Class:
+ Training
+
+Objects:
+-WorkoutCalories :  Double
+-Steps : Int
+-Distance : String
+-Points : Long
+-ExerciseCount() : String
+-RepsCount() : Int
+
+Methods:
++UpdateStatistics(Double Workout Calories...)
++ShowRealTimeStatistics(Double Calories... )
++EarlyProgramTermination() : Void

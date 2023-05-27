@@ -1,0 +1,55 @@
+Friend Request Classes
+
+Class:
+FriendRequest     
+
+Objects:            
+-SenderUsername : String      
+-RecieverUsername : String  
+-Status : Bool
+
+Methods:
++SendRequest(String CommunityUsername) : Void
++AcceptRequest(String CommunityUsername) : Void
++RejectRequest() : Void
++GetSender(Username) : String
++GetReciever(Username) : String
++SetStatus() : Bool
++FriendsListUpdate(String Username) : String
+
+
+
+Class:
+Friendslist
+
+Objects:
+-Username : String
+-FriendsList : String
+-Friends : Bool 
+
+Methods:
++UpdateFriendsList(AddUser...)
++UsersFriendsList(Username): String
++AddFriend(CommunityUsername : String)
++RemoveFriend() : String
++IsFriendsWith() : Bool
+
+
+
+Class:
+CommunityMember (κληρονομει απο user)
+
+Objects:
+-ComunityUsername : String
+-CommunityProfilePic : String
+-Freinds : String
+-BlockedFriends : String
+
+
+Methods:
++CommunityAction() : Void
++ComposePost(Content : String)
++UploadPost(post : Post)
++EditPost(post : Post , newContent : String)
++DeletePost(post : Post)
++BlockFriend(friend : CommunityMember)

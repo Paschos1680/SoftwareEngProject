@@ -1,0 +1,160 @@
+Workout Classes
+
+
+Class:
+ Training
+
+Objects:
+-WorkoutCalories :  Double
+-Steps : Int
+-Distance : String
+-Points : Long
+-ExerciseCount() : String
+-RepsCount() : Int
+
+Methods:
++UpdateStatistics(Double Workout Calories...)
++ShowRealTimeStatistics(Double Calories... )
++EarlyProgramTermination() : Void
+
+
+
+
+Class:
+WorkoutConfigurationByUser (κληρονομεί από WorkoutConfiguration)
+
+Objects:
+-TrainingConfigurationByUser : String
+-MuscleGroups : String
+-Exercises : String
+-InfeasibleProgramMessage : String
+
+Methods:
++GetMuscleGroupsSetting () : String
++SetMuscleGroupSetting() : String
++GetExercisesSetting() : String
++SetExercisesSetting() : String
++CheckProgramFeasibility() : Bool
++DisplayProgramInfeasibilityMessage() : String
+
+
+
+Class:
+TrainingPackage (κληρονομεί από WorkoutConfiguration)
+
+Objects:
+-TrainingPackage : String
+-DifficultySetting : String
+-DurationSetting : Int
+
+Methods:
++GetDifficultySetting() : String
++SetDifficultySetting() : String
++GetDurationSetting() : Int
++SetDurationSetting() : Int
++CheckForTrainingPackage() : Bool
++DisplayPackage(TrainingPackage : String)
++DisplaySimilarPackage(TrainingPackage : String)
++GenerateTrainingPackages() : String
+
+
+
+
+Class:
+PersonalisedAIGeneratedWorkout (κληρονομεί από WorkoutConfiguration)
+
+Objects:
+-PersonalisedAIGeneratedWorkout : String
+-MissingDetailsMessage : String
+-AIWorkouts : String
+
+Methods:
++CheckAIAvailability() : Bool
++ValidateData() : Bool
++ProfileSetup() : Void
++DisplayAIPrograms(AIWorkouts : String)
++GenerateAIPrograms() : String
++IsWorkoutModeEnabled() : Bool
+
+
+
+Class:
+WorkoutConfiguration
+
+Objects:
+-WorkoutType : String
+
+Methods:
++DisplayWorkoutConfOptions(WorkoutType : String)
+
+
+
+
+
+Class:
+WorkoutUser (κληρονομεί από User)
+
+Objects:
++CreateMyWorkout() : void
+
+Methods:
++ChooseType(WorkoutType : String) 
++SelectOtherWorkoutType(WorkoutType: String)
++ChooseWorkout() : Void
++StartWorkout() : Void
++EndWorkout() : Void
++AcceptChartsRedirection() : Void
++DenyChartsRedirection() : Void
++EarlyTermination() : Void
+
+
+
+Class:
+AIModesNotEnabled (κληρονομεί από PersonalisedAIGeneratedWorkout και από CheckBeforeShowingStats)
+
+Objects:
++DetectMissingDetails() : Bool
+
+Methods:
++DsiplayMissingDetailsMessage() : String
++RedirectToProfileMessageRequest() : String
++AcceptProfileRedirection() : Void
++DenyProfileRedirection() : Void
+
+
+
+
+
+Class:
+PersonalisedAIModes (κληρονομεί από UsersProfile)
+
+Objects:
+-AIGeneratedWorkoutMode : Bool
+-AICaloriePlan : Bool
+-Response1 : Char
+-Response2 : Char
+-Response3 : Char
+-Response4 : Char
+-Response5 : Char
+-Response6 : Char
+
+Methods:
++CheckForResponses( Char Response1 ...)
++EnableAIGeneratedWorkout() : Void
++EnableAICaloriePlan() : Void
+
+
+
+
+Class:
+ActivityChartsDay (κληρονομεί από Training)
+
+Objects:
+-ChartsMessage : String
+
+Methods:
++ActivityChartsRedirectionRequest : Bool
++PromptChartsAvailabilityMessage() : String
++GenerateCharts(ActivityStatsDay activitystats)
++DisplayCharts()
++DisplayInabilityMessage() : String

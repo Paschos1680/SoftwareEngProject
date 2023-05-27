@@ -1,0 +1,66 @@
+Map Usage Classes
+
+Class:
+MapTraining      
+
+Objects:
+-MapPosition : String
+-StartingPoint : String
+
+
+Methods:
++locateStartingPosition(String StartingPoint)
++StartMapTraining():void 
++finishMapTraining(): void 
++updateActivityStatistics(ActivityStatsDay)
++checkFriendsRoutes(): Bool
++publishRouteOnMap(): void 
++showActivityCharts(ActivityChartsDay)
+
+
+
+Class:
+Position
+
+Objects:
+-Position : String
+- latitude : float 
+- longitude : float
+
+Methods:
++GetLatitude() : Float
++GetLongtitude() : Float 
++GetUserPosition(String Position): Bool 
+
+
+
+
+Class:
+InitialPositionHandler
+
+Objects:
+-InitialPosition : String
+
+
+Methods:
++InitialPositionFailMessage(String InitialPosition) : String
+
+
+
+
+
+Class:
+WorkoutUser (κληρονομεί από User)
+
+Objects:
++CreateMyWorkout() : void
+
+Methods:
++ChooseType(WorkoutType : String) 
++SelectOtherWorkoutType(WorkoutType: String)
++ChooseWorkout() : Void
++StartWorkout() : Void
++EndWorkout() : Void
++AcceptChartsRedirection() : Void
++DenyChartsRedirection() : Void
++EarlyTermination() : Void

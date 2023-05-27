@@ -1,0 +1,43 @@
+Community Post Classes
+
+Class:
+CommunityMember (κληρονομει απο user)
+
+Objects:
+-ComunityUsername : String
+-CommunityProfilePic : String
+-Freinds : String
+-BlockedFriends : String
+
+
+Methods:
++CommunityAction() : Void
++ComposePost(Content : String)
++UploadPost(post : Post)
++EditPost(post : Post , newContent : String)
++DeletePost(post : Post)
++BlockFriend(friend : CommunityMember)
+
+
+
+Class: 
+CommunityPage
+
+Objects:
+-Posts : String
+
+Methods:
++DisplayPosts(viewer : Community Memeber)
+
+
+Class:
+Post
+
+Objects :
+-Content : String
+-Author : String
+
+Methods:
++GetAuthor (CommunityMember : String)
++GetContent() : String
+

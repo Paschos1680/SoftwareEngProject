@@ -1,0 +1,86 @@
+Nutritions Stats Monitoring and Update Classes
+
+
+
+Class:
+NutritionStats
+
+Objects:
+-KcalGoal : Double
+-CaloriesBurnt : Double
+-CaloriesEaten : Double
+-KcalaAvailable : Double
+-Nutrition Records : Double
+
+Methods:
++GetKcalGoal() : Double
++GetKcalBurnt() : Double 
++GetKcalEaten() : Double
++GetKcalAvailable() : Double
++GetNutritionRecords() : Double
++RemoveKcalGoalStat() : Void
++RemoveKcalAvailableStat() ; Void
++RemoveKcalBurntStat() : Void
++InformAbsenceOfData() String
++RegisterFood() : String
++RegisterRecipe() : String
++RegisterWater() : Double
++DeleteFoodRegistration() : String
++DeleteRecipeRegistration() : String
++DeleteWaterRegistration() : String
++EditFoodRegistration() Double
++EditRecipeRegistration () : Double
++EditWaterRegistration() : Double
+
+
+
+Class:
+NutritionChartsDay
+
+Objects:
+
+
+Methods:
++GenerateNutritionCharts(NutritionStats nutritionStats)
++DisplayCharts()
+
+
+Class:
+Water
+
+Objects:
+amont : double
+
+Methods:
+GetWaterIntake : Duble
+
+
+
+Class:
+Food
+
+Objects:
+-name : String
+-Calories : Double
+-ServingSize : Double
+-MealType : String
+
+Methods:
++GetName() : String
++GetCalories() : Double
++GetServingSize() : Double
++SimilarFoodRequest(Foodname : String) : String
+
+
+
+
+
+Class:
+CheckBeforeShowingStats
+
+Objects:
+
+Methods:
++CheckIfAIModeIsEnabled() : Bool
++CheckActivityStats(CalendarDay : Date)
++CheckPreviousNutritionRecordings(CalendarDay : Date)
