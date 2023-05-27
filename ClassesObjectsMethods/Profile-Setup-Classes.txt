@@ -1,0 +1,70 @@
+Profile Setup Classes
+
+
+
+
+Class:
+UsersProfile (κληρονομεί από User)
+
+Objects:
+
+Methods:
++UpdateUsersProfile() : Void
++DeleteProfileData() : Void
++ProfileSetupCompletion() : Void
+
+
+
+Class:
+User
+
+Objects:
+- id: int         
+- username: string
+- email: string
+-Username : String
+-ProfilePicture : String
+-SelectedDay : Date
+
+Methods:
++SetUsername(Username : String)
++SetProfilePictrure(ProfilePicture : String)
++SelectDay(CalendarDay : Date)
++ getUserId(): int 
++ getUsername(): string 
++ getEmail(): string 
+
+
+
+
+Class:
+QuantitiveData (κληρονομεί από UsersProfile)
+
+Objects:
+-Height : Double
+-Weight : Double
+-Sex : String
+-Age : Int
+
+Methods:
++SetHeight(Height : Double) 
++SetWeight(Weight : Double)
++SetSex(Sex : String)
++SetAge(Age : Int)
++ActivatePersonalisationMode() :Void
+
+Class:
+RegistrationProblems (κληρονομεί από UsersProfile)
+
+Objects:
+-usernameRegistered : String
+
+Methods:
++UsernameValidationCheck(): Bool
++UsernameNotRegistered() : Bool
++UsernameAlreadyExists() : Bool
++RefuseToAddQuantitiveData() : Void
++RequireToUseDifferentUsername() : Void
++AskForUsernameAgain() : String
++RefuseToAnswerQuestions() : Void
+
