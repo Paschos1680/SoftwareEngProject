@@ -9,7 +9,7 @@ public class InitialPositionHandler {
     }
 
     public String getInitialPosition() {
-        // Make API call to retrieve user's initial position
+        
         double latitude = GPSAPI.getLatitude();
         double longitude = GPSAPI.getLongitude();
 
