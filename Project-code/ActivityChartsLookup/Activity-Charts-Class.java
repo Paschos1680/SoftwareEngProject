@@ -1,33 +1,59 @@
+public class ActivityChartsDay extends Training {
+    private String chartsMessage;
 
-import java.util.HashMap;
-import java.util.Map;
-
-public class ActivityCharts {
-    private Map<String, Integer> activityTime;
-
-    public ActivityCharts() {
-        activityTime = new HashMap<>();
+    public ActivityChartsDay(String trainingConfiguration) {
+        super(trainingConfiguration);
+        this.chartsMessage = "";
     }
 
-    public void addActivityTime(String activity, int time) {
-        activityTime.put(activity, time);
-    }
+    public boolean activityChartsRedirectionRequest() {
 
-    public void removeActivityTime(String activity) {
-        activityTime.remove(activity);
-    }
+        System.out.println("Do you want to be redirected to activity charts? (yes/no)");
+        String choice = getUserInput();
 
-    public int getTotalTime() {
-        int totalTime = 0;
-        for (int time : activityTime.values()) {
-            totalTime += time;
+       
+        if (choice.equalsIgnoreCase("yes")) {
+            return true;
+        } else {
+            return false;
         }
-        return totalTime;
     }
 
-    public void displayActivities() {
-        for (Map.Entry<String, Integer> entry : activityTime.entrySet()) {
-            System.out.println(entry.getKey() + ": " + entry.getValue() + " minutes");
-        }
+    public String promptChartsAvailabilityMessage() {
+
+
+        return "Activity charts are available for your training. Would you like to view them?";
+    }
+
+    public void generateCharts(ActivityStatsDay activityStats) {
+
+
+       
+        System.out.println("Generating activity charts for the selected day...");
+
+        
+        System.out.println("Activity charts generated:");
+        System.out.println("Chart 1: ...");
+        System.out.println("Chart 2: ...");
+        System.out.println("Chart 3: ...");
+    }
+
+    public void displayCharts() {
+
+
+        System.out.println("Displaying activity charts...");
+       
+    }
+
+    public String displayInabilityMessage() {
+    
+
+        return "Unable to generate activity charts for the selected day. Please try again later.";
+    }
+
+    private String getUserInput() {
+
+
+        return "yes"; 
     }
 }
