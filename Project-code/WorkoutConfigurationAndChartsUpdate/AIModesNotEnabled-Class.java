@@ -1,28 +1,29 @@
-public class AIModesNotEnabled extends PersonalisedAIGeneratedWorkout implements CheckBeforeShowingStats {
-    public AIModesNotEnabled(String personalisedAIGeneratedWorkout) {
-        super(personalisedAIGeneratedWorkout);
+public class AIModesNotEnabled extends PersonalisedAIGeneratedWorkout {
+    public AIModesNotEnabled(String personalisedAIGeneratedWorkout, String missingDetailsMessage, String AIWorkouts) {
+        super(personalisedAIGeneratedWorkout, missingDetailsMessage, AIWorkouts);
     }
 
     public boolean detectMissingDetails() {
-     
-        return ;
+        boolean missingDetails = false;
+        if (getPersonalisedAIGeneratedWorkout() == null || getMissingDetailsMessage() == null || getAIWorkouts() == null) {
+            missingDetails = true;
+        }
+        
+        return missingDetails;
     }
 
     public String displayMissingDetailsMessage() {
-        // Display a message indicating that some details are missing for AI modes
-        return "Missing details for AI modes. Please update your preferences.";
+        return "Please provide the details (2 questions) missing from your profile for access to the AI mode.";
     }
 
     public String redirectToProfileMessageRequest() {
-        
-        return "Please redirect to the profile page to update your preferences.";
+        return "Do you want to go to your profile to provide the missing details?";
     }
 
     public void acceptProfileRedirection() {
-        
+        System.out.println("Redirecting to the profile page...");
     }
 
     public void denyProfileRedirection() {
-        
+        System.out.println("Continuing without providing the missing details, but You have to select a different type of workout");
     }
-}
