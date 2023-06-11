@@ -1,27 +1,47 @@
-
-
-import java.util.ArrayList;
-import java.util.List;
+import java.time.LocalDateTime;
 
 public class RecipeSearch {
-    private List<String> recipes;
+    private String searchedRecipeName;
+    private float averageRating;
+    private int ratingCount;
+    private String createdBy;
+    private LocalDateTime creationDate;
 
-    public RecipeSearch() {
-        recipes = new ArrayList<>();
+    public RecipeSearch(String searchedRecipeName, float averageRating, int ratingCount, String createdBy, LocalDateTime creationDate) {
+        this.searchedRecipeName = searchedRecipeName;
+        this.averageRating = averageRating;
+        this.ratingCount = ratingCount;
+        this.createdBy = createdBy;
+        this.creationDate = creationDate;
     }
 
-    public void addRecipe(String recipe) {
-        recipes.add(recipe);
+    public void displayPopularRecipes(String searchedRecipeName) {
+        System.out.println("Displaying popular recipes for: " + searchedRecipeName);
     }
 
-    public void removeRecipe(String recipe) {
-        recipes.remove(recipe);
+    public void displayHighlyRatedRecipes(String searchedRecipeName) {
+        System.out.println("Displaying highly rated recipes for: " + searchedRecipeName);
     }
 
-    public void displayRecipes() {
-        System.out.println("Available Recipes:");
-        for (String recipe : recipes) {
-            System.out.println("- " + recipe);
-        }
+    public void searchRecipe(String searchedRecipeName) {
+        System.out.println("Searching for recipe: " + searchedRecipeName);
+    }
+
+    public String uploadRecipeRequest() {
+        return "Recipe upload request successful.";
+    }
+
+    public double rateRecipe() {
+        ratingCount++;
+        averageRating = (averageRating * (ratingCount - 1) + newRating) / ratingCount;
+        return averageRating;
+    }
+
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    public LocalDateTime getCreationDate() {
+        return creationDate;
     }
 }
