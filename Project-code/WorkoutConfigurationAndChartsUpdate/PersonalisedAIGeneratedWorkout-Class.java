@@ -3,45 +3,33 @@ public class PersonalisedAIGeneratedWorkout extends WorkoutConfiguration {
     private String missingDetailsMessage;
     private String AIWorkouts;
 
-    public PersonalisedAIGeneratedWorkout(String personalisedAIGeneratedWorkout) {
+    public PersonalisedAIGeneratedWorkout(String personalisedAIGeneratedWorkout, String missingDetailsMessage, String AIWorkouts) {
         this.personalisedAIGeneratedWorkout = personalisedAIGeneratedWorkout;
-    }
-
-    public String getPersonalisedAIGeneratedWorkout() {
-        return personalisedAIGeneratedWorkout;
-    }
-
-    public void setPersonalisedAIGeneratedWorkout(String personalisedAIGeneratedWorkout) {
-        this.personalisedAIGeneratedWorkout = personalisedAIGeneratedWorkout;
+        this.missingDetailsMessage = missingDetailsMessage;
+        this.AIWorkouts = AIWorkouts;
     }
 
     public boolean checkAIAvailability() {
-       
-        return ;
+        return AIEngine.isRunning();
     }
 
-    public boolean validateData() {
-       
-        return ;
-    }
-
-    public void profileSetup() {
-     
+    
+       public void profileSetup() {
+        user.setAIEnabled(true);
+        user.setAIGeneratedWorkoutMode(true);
+        System.out.println("Profile setup for AI-generated workouts completed.");
     }
 
     public void displayAIPrograms(String AIWorkouts) {
-        // Display the generated AI programs to the user
-        System.out.println("AI Programs:");
-        System.out.println(AIWorkouts);
+        System.out.println("Available AI Workout Programs:\n" + AIWorkouts);
     }
 
     public String generateAIPrograms() {
-      
-        return ;
+        String generatedPrograms = AIAlgorithm.generateWorkoutProgram(user);
+        return generatedPrograms;
     }
 
     public boolean isWorkoutModeEnabled() {
-       
-        return ;
+        return user.isWorkoutModeEnabled();
     }
 }
