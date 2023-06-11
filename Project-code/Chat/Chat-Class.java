@@ -76,9 +76,7 @@ public class Chat {
     }
 
     private void viewMessages() {
-        // Display messages for the current user
-        // Allow deletion or editing of messages
-        // Update personal chat page
+
         personalChatPage();
     }
 
