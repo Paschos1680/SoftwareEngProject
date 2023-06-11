@@ -1,6 +1,4 @@
-Map Class:
 
-java
 
 import java.util.HashMap;
 
