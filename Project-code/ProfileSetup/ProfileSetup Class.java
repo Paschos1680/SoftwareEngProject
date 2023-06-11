@@ -1,6 +1,4 @@
-ProfileSetup Class:
 
-java
 
 public class ProfileSetup {
     private String username;
