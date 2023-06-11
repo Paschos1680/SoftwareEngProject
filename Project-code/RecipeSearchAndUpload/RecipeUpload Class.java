@@ -1,6 +1,3 @@
-RecipeUpload Class:
-
-java
 
 public class RecipeUpload {
     private String recipeName;
