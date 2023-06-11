@@ -13,7 +13,7 @@ public class InitialPositionHandler {
         double latitude = GPSAPI.getLatitude();
         double longitude = GPSAPI.getLongitude();
 
-        // Update the initial position
+       
         this.initialPosition = "Latitude: " + latitude + ", Longitude: " + longitude;
 
         return initialPosition;
