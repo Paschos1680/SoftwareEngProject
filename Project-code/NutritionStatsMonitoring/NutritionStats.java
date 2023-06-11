@@ -42,56 +42,51 @@ public class NutritionStats {
     }
 
     public String registerFood() {
-        // Register food entry logic
-       
+      
         return "Food entry registered successfully.";
     }
 
     public String registerRecipe() {
-        // Register recipe entry logic
-       
+        
         return "Recipe entry registered successfully.";
     }
 
     public double registerWater() {
-        // Register water intake logic
         
         return 0.0;
     }
 
     public String deleteFoodRegistration() {
-        // Delete food registration logic
+    
         
         return "Food registration deleted successfully.";
     }
 
     public String deleteRecipeRegistration() {
-        // Delete recipe registration logic
+        
         
         return "Recipe registration deleted successfully.";
     }
 
     public String deleteWaterRegistration() {
-        // Delete water registration logic
+       
         
         return "Water registration deleted successfully.";
     }
 
     public double editFoodRegistration() {
-        // Edit food registration logic
-        // ...
+       
         return 0.0;
     }
 
     public double editRecipeRegistration() {
-        // Edit recipe registration logic
+      
      
         return 0.0;
     }
 
     public double editWaterRegistration() {
-        // Edit water registration logic
-        
+       
         return 0.0;
     }
 }
