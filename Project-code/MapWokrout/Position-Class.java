@@ -25,7 +25,7 @@ public class Position {
 
     public boolean getUserPosition(String position) {
         try {
-            // Connect to GPS API endpoint
+           
             URL url = new URL("https://api.gpsprovider.com/user-position?position=" + position);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
@@ -47,11 +47,11 @@ public class Position {
 
                 return true;
             } else {
-                // Error handling for unsuccessful API call
+                
                 return false;
             }
         } catch (Exception e) {
-            // Exception handling for connection or parsing errors
+           
             return false;
         }
     }
