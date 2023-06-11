@@ -30,7 +30,7 @@ public class Position {
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
 
-            // Get the response
+            
             int responseCode = connection.getResponseCode();
             if (responseCode == HttpURLConnection.HTTP_OK) {
                 BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
@@ -41,7 +41,7 @@ public class Position {
                 float latitude = parseLatitudeFromResponse(response);
                 float longitude = parseLongitudeFromResponse(response);
 
-                // Update the latitude and longitude of the Position object
+                
                 this.latitude = latitude;
                 this.longitude = longitude;
 
@@ -56,7 +56,7 @@ public class Position {
         }
     }
 
-    // Helper method to parse latitude from API response
+    
     private float parseLatitudeFromResponse(String response) {
         
         return 0.0f; 
