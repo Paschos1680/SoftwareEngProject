@@ -1,41 +1,41 @@
-import java.util.List;
-
 public class Recipe {
-    private String name;
-    private List<String> ingredients;
-    private String instructions;
-    private int servings;
+    private String recipeName;
+    private String recipeCalories;
+    private double recipePortion;
 
-    public Recipe(String name, List<String> ingredients, String instructions, int servings) {
-        this.name = name;
-        this.ingredients = ingredients;
-        this.instructions = instructions;
-        this.servings = servings;
+    public Recipe(String recipeName, String recipeCalories, double recipePortion) {
+        this.recipeName = recipeName;
+        this.recipeCalories = recipeCalories;
+        this.recipePortion = recipePortion;
     }
 
-    public String getName() {
-        return name;
+    public String getRecipeName() {
+        return recipeName;
     }
 
-    public List<String> getIngredients() {
-        return ingredients;
+    public String getRecipeCalories() {
+        return recipeCalories;
     }
 
-    public String getInstructions() {
-        return instructions;
+    public double getRecipePortion() {
+        return recipePortion;
     }
 
-    public int getServings() {
-        return servings;
+    public void setRecipeName(String recipeName) {
+        this.recipeName = recipeName;
     }
 
-    public String searchRecipe(String keyword) {
-        // Perform logic to search for recipes based on the provided keyword
-        // and return the result as a string
-        return "Search recipe for keyword: " + keyword;
+    public void setRecipeCalories(String recipeCalories) {
+        this.recipeCalories = recipeCalories;
     }
 
-    public void uploadRecipe() {
-        
+    public void setRecipePortion(double recipePortion) {
+        this.recipePortion = recipePortion;
+    }
+
+    public void printRecipeDetails() {
+        System.out.println("Recipe Name: " + recipeName);
+        System.out.println("Recipe Calories: " + recipeCalories);
+        System.out.println("Recipe Portion: " + recipePortion);
     }
 }
