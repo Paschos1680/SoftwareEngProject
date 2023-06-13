@@ -19,7 +19,7 @@ public class ActivityStatsDay extends Training {
         
      
         
-        // Update activity stats data
+
         activityStatsData = "Steps: 10000, Distance: 5.0 km, Calories Burned: 500";
     }
     
