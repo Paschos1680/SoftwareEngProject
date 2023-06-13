@@ -13,7 +13,7 @@ public class PersonalisedAIModes extends UsersProfile {
             enableAIGeneratedWorkout();
         }
 
-        // Enable AI calorie plan if response3, response4, response5, and response6 are 'Y'
+
         if (response3 == 'Y' && response4 == 'Y' && response5 == 'Y' && response6 == 'Y') {
             enableAICaloriePlan();
         }
