@@ -28,8 +28,7 @@ public class Food {
     }
 
     public String similarFoodRequest(String foodName) {
-        // Perform logic to search for similar food based on provided food name
-        // and return the result as a string
+
         return "Similar food request for " + foodName;
     }
 }
