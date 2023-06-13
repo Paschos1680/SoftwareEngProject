@@ -17,6 +17,6 @@ public class CheckBeforeShowingStats {
     }
     
     public void checkPreviousNutritionRecordings(Date calendarDay) {
-        // Check the previous nutrition recordings for the specified calendar day
+
        
 }
