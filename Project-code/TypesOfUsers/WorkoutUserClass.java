@@ -11,7 +11,6 @@ public class WorkoutUser extends User {
 
     public void chooseType(String workoutType) {
         System.out.println("Choosing workout type: " + workoutType);
-        // Your logic to choose the workout type
     }
 
     public void selectOtherWorkoutType(String workoutType) {
